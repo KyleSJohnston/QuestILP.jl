@@ -165,8 +165,7 @@ function Base.print(io::IO, x::ILPValue{T}) where {T<:Unsigned}
     print(io, "0x", string(x.value, base=16), 'i')
 end
 Base.print(io::IO, x::ILPValue{T}) where {T<:AbstractFloat} = print(io, x.value)  # TODO: consider performance of `Printf.@printf(buf, "%.6f", x.value)` (or similar)
-# TODO: support Decimals.jl
-# Base.print(io::IO, x::ILPValue{Decimal}) = print(io, x.value, 'd')
+# See QuestILPDecimals.jl for decimal support
 Base.print(io::IO, x::ILPValue{Bool}) = print(io, x.value ? 't' : 'f')
 function Base.print(io::IO, x::ILPValue{T}) where {T<:AbstractString}
     write(io, '"')
