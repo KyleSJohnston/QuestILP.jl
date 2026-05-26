@@ -1,0 +1,22 @@
+name = "QuestILP"
+uuid = "c66a9ea5-f4b8-4ffb-a861-19ecdc0f780c"
+version = "0.1.0"
+authors = ["Kyle S. Johnston <KyleSJohnston@users.noreply.github.com>"]
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+
+[weakdeps]
+Decimals = "abce61dc-4473-55a0-ba07-351d65e31d42"
+
+[extensions]
+QuestILPDecimals = "Decimals"
+
+[compat]
+Dates = "1.11.0"
+Decimals = "0.4.1,0.5.1"
+HTTP = "1.11.0"
+Logging = "1.11.0"
+julia = "1.10"
